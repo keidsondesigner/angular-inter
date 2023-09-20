@@ -1,9 +1,24 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Blank
-    </ion-title>
-  </ion-toolbar>
+<ion-header class="ion-no-border" [translucent]="true">
+	<ion-toolbar>
+		<ion-title class="ion-text-end">
+			<span
+				id="open-modal"
+				class="ion-float-end"
+				fill="clear"
+				size="small"
+				expand="block"
+			>
+				<ion-icon
+					color="primary"
+					slot="icon-only"
+					name="alert-circle-outline"
+				></ion-icon>
+			</span>
+		</ion-title>
+		<ion-title class="ion-logo ion-text-center">
+			<img src="/assets/img/banco-inter.svg" />
+		</ion-title>
+	</ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
@@ -13,8 +28,92 @@
     </ion-toolbar>
   </ion-header>
 
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
+  <div containerForm class="ion-padding">
+    <form [formGroup]="formLogin" (ngSubmit)="onSubmit()" class="container-form">
+      <div class="card">
+        <div class="card-user">
+          <img
+            class="avatar-user"
+            src="https://avatars.githubusercontent.com/u/76180887?v=4"
+            alt=""
+          />
+          <div class="info-user">
+            <span>Keidson Siqueira</span>
+            <p>***.082.372-**</p>
+          </div>
+        </div>
+        <ion-button id="open-modal" fill="clear" class="ion-activated">
+          Trocar
+          <!-- <ion-icon slot="end" name="arrow-forward"></ion-icon> -->
+        </ion-button>
+      </div>
+      <div class="input-container">
+        <label class="label-password" for="input-password">Senha</label>
+        <input
+          id="input-password"
+          [type]="showAmount ? 'text' : 'password'"
+          class="input"
+          placeholder="Digite sua senha"
+          formControlName="password"
+        />
+        <span
+          class="toggle-password icon"
+          type="button"
+          (click)="toggleShowAmount()"
+        >
+          <ion-icon
+            color="primary"
+            slot="icon-only"
+            [name]="showAmount ? 'eye-outline' : 'eye-off-outline'"
+          ></ion-icon>
+        </span>
+      </div>
+      <div class="container-buttons">
+        <ion-button
+          type="submit"
+          fill="solid"
+          [disabled]="!formLogin.valid"
+        >
+          Entrar
+        </ion-button>
+        <div
+            *ngIf="f['password'].invalid && (f['password'].dirty || f['password'].touched)"
+            class="text-pink-600"
+          >
+            <div message-error *ngIf="f['password'].errors?.['required']">
+              senha é obrigatória
+            </div>
+            <div message-error *ngIf="f['password'].errors?.['minlength']">
+              senha deve ter ao menos 6 caracteres
+            </div>
+          </div>
+        <ion-button recorver-password fill="clear" class="ion-activated">
+          Esqueci minha senha
+          <ion-icon slot="end" name="chevron-forward-outline"></ion-icon>
+        </ion-button>
+      </div>
+    </form>
   </div>
 </ion-content>
+
+<ion-footer class="ion-no-border">
+	<ion-toolbar>
+		<ion-title class="ion-text-center">
+			<div class="footer-itens">
+				<div class="btn-action">
+					<ion-icon
+						color="primary"
+						slot="end"
+						name="arrow-forward"
+					></ion-icon>
+					<ion-button fill="clear" class="ion-activated">
+						iSafe
+					</ion-button>
+				</div>
+				<ion-button fill="clear" class="ion-activated">
+					Abrir uma conta
+				</ion-button>
+			</div>
+		</ion-title>
+	</ion-toolbar>
+</ion-footer>
