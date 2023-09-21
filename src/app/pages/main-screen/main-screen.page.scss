@@ -1,0 +1,34 @@
+[interLogo] {
+  width: 4rem;
+  // margin-left: 0.5rem;
+}
+
+ion-icon {
+  font-size: 24px;
+  margin-left: 8px;
+}
+
+
+[amountHidden] {
+  background-color: #f4f4f4;
+  border-radius: 6px;
+  width: 6rem;
+  height: 1.7rem;
+}
+
+[textStatement] {
+  font-size: 12px;
+  font-weight: 600;
+  margin: 5px 0 0 0;
+}
+
+
+.account-card-amount {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  font-size: 14px;
+  font-weight: 700;
+  margin: 0 0 5px 0;
+}

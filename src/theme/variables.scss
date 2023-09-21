@@ -3,30 +3,30 @@
 
 /** Ionic CSS Variables **/
 @font-face {
-	font-family: "Mada";
-	src:	url("../assets/fonts/Mada/Mada-Regular.ttf") format("truetype");
+	font-family: "Inter";
+	src:	url("../assets/fonts/Inter/Inter-Regular.ttf") format("truetype");
 	font-weight: 400;
 	font-display: swap;
 }
 
 @font-face {
-	font-family: "Mada";
-	src: url("../assets/fonts/Mada/Mada-Bold.ttf") format("truetype");
-	font-weight: 700;
+	font-family: "Inter";
+	src: url("../assets/fonts/Inter/Inter-Medium.ttf") format("truetype");
+	font-weight: 500;
 	font-display: swap;
 }
 
 @font-face {
-	font-family: "Poppins";
-	src: url("../assets/fonts/Poppins/Poppins-Regular.ttf") format("truetype");
-	font-weight: 400;
-	font-display: swap;
-}
-
-@font-face {
-	font-family: "Poppins";
-	src: url("../assets/fonts/Poppins/Poppins-SemiBold.ttf") format("truetype");
+	font-family: "Inter";
+	src: url("../assets/fonts/Inter/Inter-SemiBold.ttf") format("truetype");
 	font-weight: 600;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: "Inter";
+	src: url("../assets/fonts/Inter/Inter-Bold.ttf") format("truetype");
+	font-weight: 700;
 	font-display: swap;
 }
 
@@ -36,9 +36,9 @@
 /** Ionic CSS Variables **/
 :root {
 	/** font **/
-	--ion-font-family: 'Mada' !important;
+	--ion-font-family: 'Inter' !important;
 
-	font-family:  'Poppins';
+	font-family: 'Inter', sans-serif;
 
 	/** primary **/
 	--ion-color-primary: #ff7a01;

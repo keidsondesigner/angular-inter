@@ -43,3 +43,7 @@ ion-button {
 	--border-radius: 8px;
 	height: 40px;
 }
+
+input:focus-visible {
+  outline: none;
+}
