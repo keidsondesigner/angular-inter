@@ -1,5 +1,7 @@
 {
   "name": "clone-inter",
-  "integrations": {},
+  "integrations": {
+    "capacitor": {}
+  },
   "type": "angular"
 }
