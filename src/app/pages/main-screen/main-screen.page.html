@@ -1,0 +1,111 @@
+<ion-content [fullscreen]="true" class="ion-padding">
+  <ion-toolbar class="ion-color">
+    <ion-row class="ion-justify-content-between">
+      <ion-col class="ion-no-padding ion-align-self-center">
+        <img interLogo src="/assets/img/banco-inter.svg" alt="">
+      </ion-col>
+      <ion-row class="ion-justify-content-end">
+        <ion-col class="ion-no-padding ion-align-self-center">
+          <ion-icon class="ion-margin-end" color="primary" name="search-outline"></ion-icon>
+          <ion-icon color="primary" name="ellipsis-vertical"></ion-icon>
+        </ion-col>
+      </ion-row>
+    </ion-row>
+  </ion-toolbar>
+
+  <ion-row class="ion-padding-bottom">
+    <ion-col class="ion-no-padding ion-align-self-center" size="12" >
+      <ion-row>
+        <p *ngIf="showAmount"  accountAmount>
+          {{ accountDetails.accountBalance | currency: 'BRL' : 'R$ ' : '1.2-2' }}
+        </p>
+        <span *ngIf="!showAmount" amountHidden></span>
+        <ion-label
+          class="ion-no-padding ion-align-self-center"
+          (click)="toggleShowAmount()"
+          color="dark"
+          fill="clear"
+        >
+          <ion-icon
+            class="ion-no-padding ion-align-self-center"
+            slot="icon-only"
+            color="primary"
+            [name]="showAmount ? iconEyeOn : iconEyeOff"
+          >
+          </ion-icon>
+        </ion-label>
+      </ion-row>
+    </ion-col>
+    <ion-col size="12" class="ion-no-padding">
+      <p textStatement>
+        <ion-text color="primary" (click)="navigateStatement()" >Ver extrato</ion-text>
+      </p>
+    </ion-col>
+  </ion-row>
+
+  <ion-row containerCard class="ion-justify-content-between ion-padding-top">
+    <ion-col
+      *ngFor="let item of featuresPrimary;  let i = index"
+      (click)="handleNavigateFeature(i)"
+      size="3.8" class="ion-no-padding"
+    >
+      <app-card-feature
+        [titleFeature]="item.titleFeature"
+        [srcFeature]="item.srcFeature"
+      >
+      </app-card-feature>
+    </ion-col >
+  </ion-row>
+
+  <div
+    [hidden]="!showFeaturesSecondary"
+    [class.reveal-content]="true"
+    [class.show]="showFeaturesSecondary"
+    [class.hide]="!showFeaturesSecondary"
+    class="animated-content"
+  >
+    <ion-row containerCard class="ion-justify-content-between">
+      <ion-col *ngFor="let item of featuresSecondary"  size="3.8" class="ion-no-padding">
+        <app-card-feature
+          [titleFeature]="item.titleFeature"
+          [srcFeature]="item.srcFeature"
+        >
+        </app-card-feature>
+      </ion-col >
+    </ion-row>
+  </div>
+
+  <ion-row class="ion-justify-content-center ion-padding-bottom">
+    <ion-icon
+      (click)="toggleFeaturesSecondary()"
+      [class.seta-para-cima]="!showFeaturesSecondary"
+      [class.seta-para-baixo]="showFeaturesSecondary"
+      name="chevron-down-outline"
+      color="primary"
+    >
+    </ion-icon>
+    <!-- <button (click)="toggleDiv()">Mostrar Conteúdo</button> -->
+  </ion-row>
+
+  <app-banner-title
+    (handleClick)="onHandleClick()"
+    bannerTitle="Global Account"
+    srcBanner="../../../assets/img/img-inter-global-account.png"
+  >
+  </app-banner-title>
+
+  <div containerPromotion>
+    <app-banner-title
+      (handleClick)="onHandleClick()"
+      bannerTitle="Antecipação FGTS"
+      srcBanner="../../../assets/img/img-emprestimo-fgts.png"
+    >
+    </app-banner-title>
+    <app-banner-title
+      (handleClick)="onHandleClick()"
+      bannerTitle="Plano Odonto"
+      srcBanner="../../../assets/img/img-plano-odonto.png"
+    >
+    </app-banner-title>
+  </div>
+</ion-content>

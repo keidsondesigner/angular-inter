@@ -10,7 +10,15 @@ const routes: Routes = [
     path: '',
     redirectTo: 'home',
     pathMatch: 'full'
+  },  {
+    path: 'main-screen',
+    loadChildren: () => import('./pages/main-screen/main-screen.module').then( m => m.MainScreenPageModule)
   },
+  {
+    path: 'statement',
+    loadChildren: () => import('./pages/statement/statement.module').then( m => m.StatementPageModule)
+  },
+
 ];
 
 @NgModule({
