@@ -64,6 +64,7 @@
       </div>
       <div class="container-buttons">
         <ion-button
+          buttonLogin
           type="submit"
           fill="solid"
           [disabled]="!formLogin.valid"
@@ -81,9 +82,8 @@
               senha deve ter ao menos 6 caracteres
             </div>
           </div>
-        <ion-button recorver-password fill="clear" class="ion-activated">
+        <ion-button recorverPassword fill="clear" class="ion-activated">
           Esqueci minha senha
-          <ion-icon slot="end" name="chevron-forward-outline"></ion-icon>
         </ion-button>
       </div>
     </form>
@@ -95,16 +95,12 @@
 		<ion-title class="ion-text-center">
 			<div class="footer-itens">
 				<div class="btn-action">
-					<ion-icon
-						color="primary"
-						slot="end"
-						name="arrow-forward"
-					></ion-icon>
-					<ion-button fill="clear" class="ion-activated">
+          <ion-icon color="primary" slot="start" name="lock-closed-outline"></ion-icon>
+					<ion-button fill="clear" class="ion-activated ion-no-margin">
 						iSafe
 					</ion-button>
 				</div>
-				<ion-button fill="clear" class="ion-activated">
+				<ion-button fill="clear" class="ion-activated ion-no-margin">
 					Abrir uma conta
 				</ion-button>
 			</div>

@@ -36,7 +36,7 @@ export class HomePage {
   get f() { return this.formLogin.controls; }
 
 	onSubmit() {
-		this.router.navigate(['/dashboard']);
+		this.router.navigate(['/main-screen']);
 	}
 
 }
