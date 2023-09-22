@@ -1,0 +1,21 @@
+[itemCard] {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  padding: 30px 8px;
+  gap: 18px;
+
+  border-radius: 5px;
+  border: solid 1px gainsboro;
+  background-color: #ffffff;
+  [iconCard] {
+    width: 2rem;
+  }
+  p {
+    margin: 0;
+    font-size: 10px;
+    font-weight: 700;
+    text-align: center;
+  }
+}
