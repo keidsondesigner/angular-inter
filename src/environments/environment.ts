@@ -3,7 +3,8 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  awsStorageS3: 'https://bucket-imgs-app.s3.sa-east-1.amazonaws.com',
 };
 
 /*
