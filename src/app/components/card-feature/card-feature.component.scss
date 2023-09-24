@@ -8,7 +8,7 @@
 
   border-radius: 5px;
   border: solid 1px gainsboro;
-  background-color: #ffffff;
+  transition: background 1s ease;
   [iconCard] {
     width: 2rem;
   }
@@ -18,4 +18,17 @@
     font-weight: 700;
     text-align: center;
   }
+
+  &:hover {
+    background-color: #ffff;
+    background-image: radial-gradient(circle, transparent 1%, #ff7c0117 2%);
+    background-position: center;
+    background-size: 20000%;
+    }
+
+  &:active {
+    background-size: 100%;
+    transition: background 0s;
+  }
 }
+

@@ -29,15 +29,24 @@ ion-content {
   }
 }
 
+[changeAccount] {
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 0px;
+  padding: 5px 0;
+}
+
 .container-buttons{
 	display: flex;
 	flex-direction: column;
 
   [buttonLogin] {
     font-size: 14px;
-    font-weight: 600;
+    font-weight: 700;
     letter-spacing: 0px;
+    padding: 5px 0;
   }
+
 
 	[message-error] {
 		font-weight: 100;
@@ -48,8 +57,9 @@ ion-content {
 	}
 	[recorverPassword] {
     font-size: 14px;
-    font-weight: 600;
+    font-weight: 700;
     letter-spacing: 0px;
+    padding: 5px 0;
 
 		margin-top: 24px;
 	}
@@ -138,10 +148,22 @@ ion-icon {
 
 .footer-itens {
 	display: flex;
-    justify-content: space-between;
-    align-items: center;
+  justify-content: space-between;
+  align-items: center;
+
+  ion-button {
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 0px;
+  }
 	.btn-action {
 		display: flex;
 		align-items: center;
+
+    ion-button {
+      font-size: 14px;
+      font-weight: 700;
+      letter-spacing: 0px;
+    }
 	}
 }

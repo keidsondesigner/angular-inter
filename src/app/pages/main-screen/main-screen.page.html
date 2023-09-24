@@ -2,7 +2,7 @@
   <ion-toolbar class="ion-color">
     <ion-row class="ion-justify-content-between">
       <ion-col class="ion-no-padding ion-align-self-center">
-        <img interLogo src="/assets/img/banco-inter.svg" alt="">
+        <img interLogo [src]="apiAwsStorage + '/img/banco-inter.svg'"/>
       </ion-col>
       <ion-row class="ion-justify-content-end">
         <ion-col class="ion-no-padding ion-align-self-center">
@@ -17,7 +17,7 @@
     <ion-col class="ion-no-padding ion-align-self-center" size="12" >
       <ion-row>
         <p *ngIf="showAmount"  accountAmount>
-          {{ accountDetails.accountBalance | currency: 'BRL' : 'R$ ' : '1.2-2' }}
+          {{ accountDetails.accountBalance | currency: 'BRL' : 'R$' : '1.2-2' }}
         </p>
         <span *ngIf="!showAmount" amountHidden></span>
         <ion-label
@@ -84,13 +84,12 @@
       color="primary"
     >
     </ion-icon>
-    <!-- <button (click)="toggleDiv()">Mostrar Conteúdo</button> -->
   </ion-row>
 
   <app-banner-title
     (handleClick)="onHandleClick()"
     bannerTitle="Global Account"
-    srcBanner="../../../assets/img/img-inter-global-account.png"
+    [srcBanner]="apiAwsStorage + '/img/img-inter-global-account.png'"
   >
   </app-banner-title>
 
@@ -98,13 +97,13 @@
     <app-banner-title
       (handleClick)="onHandleClick()"
       bannerTitle="Antecipação FGTS"
-      srcBanner="../../../assets/img/img-emprestimo-fgts.png"
+      [srcBanner]="apiAwsStorage + '/img/img-emprestimo-fgts.png'"
     >
     </app-banner-title>
     <app-banner-title
       (handleClick)="onHandleClick()"
       bannerTitle="Plano Odonto"
-      srcBanner="../../../assets/img/img-plano-odonto.png"
+      [srcBanner]="apiAwsStorage + '/img/img-plano-odonto.png'"
     >
     </app-banner-title>
   </div>
