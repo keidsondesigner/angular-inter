@@ -61,7 +61,7 @@ export class MainScreenPage implements OnInit {
   }
 
   detailsBanner(value: number) {
-    console.log('Disparando o click pai??');
+    console.log('Pai disparando o click');
     // if (value === 0) {
     //   console.log("Global Account");
     // }

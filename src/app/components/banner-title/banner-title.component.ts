@@ -14,6 +14,6 @@ export class BannerTitleComponent {
 
   emitClickEvent() {
     this.onClickHandler.emit();
-    console.log('Emitindo event click filho');
+    console.log('Filho emitindo event click');
   }
 }
