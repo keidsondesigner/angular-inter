@@ -1,4 +1,13 @@
-<ion-col (click)="emitEvent()" itemCard class="ion-no-padding">
-  <img backgroundCard [src]="srcBanner" alt="">
-  <p>{{ bannerTitle }}</p>
+<ion-col
+  class="ion-no-padding"
+  itemCard
+  (click)="emitClickEvent()"
+>
+  <img
+    backgroundCard
+    [src]="srcBanner"
+  />
+  <p>
+    {{ bannerTitle }}
+  </p>
 </ion-col>
