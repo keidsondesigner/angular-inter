@@ -60,8 +60,31 @@ export class MainScreenPage implements OnInit {
     this.navController.navigateForward('statement');
   }
 
-  onHandleClick() {
+  detailsBanner(value: number) {
     console.log('Disparando o click pai??');
+    // if (value === 0) {
+    //   console.log("Global Account");
+    // }
+    // if (value === 1) {
+    //   console.log("Antecipação FGTS");
+    // }
+    // if (value === 2) {
+    //   console.log("Plano Odonto");
+    // }
+
+    switch (value) {
+      case 0:
+        console.log("Global Account");
+        break;
+      case 1:
+        console.log("Antecipação FGTS");
+        break;
+      case 2:
+        console.log("Plano Odonto");
+        break;
+      default:
+        break;
+    }
   }
 
   handleNavigateFeature(id: number) {
@@ -73,7 +96,6 @@ export class MainScreenPage implements OnInit {
         case 1:
           this.navController.navigateForward('statement');
           break;
-
         default:
           break;
       }

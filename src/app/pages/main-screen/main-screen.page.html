@@ -78,8 +78,8 @@
   <ion-row class="ion-justify-content-center ion-padding-bottom">
     <ion-icon
       (click)="toggleFeaturesSecondary()"
-      [class.seta-para-cima]="!showFeaturesSecondary"
-      [class.seta-para-baixo]="showFeaturesSecondary"
+      [class.arrow-up]="!showFeaturesSecondary"
+      [class.arrow-down]="showFeaturesSecondary"
       name="chevron-down-outline"
       color="primary"
     >
@@ -87,7 +87,7 @@
   </ion-row>
 
   <app-banner-title
-    (handleClick)="onHandleClick()"
+    (onClickHandler)="detailsBanner(0)"
     bannerTitle="Global Account"
     [srcBanner]="apiAwsStorage + '/img/img-inter-global-account.png'"
   >
@@ -95,13 +95,13 @@
 
   <div containerPromotion>
     <app-banner-title
-      (handleClick)="onHandleClick()"
+      (onClickHandler)="detailsBanner(1)"
       bannerTitle="Antecipação FGTS"
       [srcBanner]="apiAwsStorage + '/img/img-emprestimo-fgts.png'"
     >
     </app-banner-title>
     <app-banner-title
-      (handleClick)="onHandleClick()"
+      (onClickHandler)="detailsBanner(2)"
       bannerTitle="Plano Odonto"
       [srcBanner]="apiAwsStorage + '/img/img-plano-odonto.png'"
     >

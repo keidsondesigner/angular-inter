@@ -84,15 +84,15 @@ ion-icon {
 }
 
 //animação seta button
-.seta-para-cima,
-.seta-para-baixo {
+.arrow-up,
+.arrow-down {
   transition: transform 0.3s ease;
 }
 
-.seta-para-cima {
+.arrow-up {
   transform: rotate(0deg);
 }
 
-.seta-para-baixo {
+.arrow-down {
   transform: rotate(180deg);
 }
